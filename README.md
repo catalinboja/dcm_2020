@@ -1,2 +1,2 @@
-# dcm_2020
-Support repository for DCM laboratory
+# dmc_2020
+Support repository for DMC laboratory
