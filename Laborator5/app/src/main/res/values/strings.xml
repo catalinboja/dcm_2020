@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Laborator5</string>
+    <string name="menuExit">Exit</string>
+    <string name="menuAbout">About</string>
+    <string name="menuSetari">Setari</string>
+    <string name="menuDate">Date</string>
+    <string name="menuDate_Conexiune">Conexiune</string>
+    <string name="menuDate_PreiaDate">Preia date</string>
+
+    <string name="labelTextSetariServer">Selectati serverul pentru date:</string>
+</resources>

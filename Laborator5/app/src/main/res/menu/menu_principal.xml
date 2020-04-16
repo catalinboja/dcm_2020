@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_item_about" android:title="@string/menuAbout"></item>
+    <item android:title="@string/menuDate">
+        <menu>
+            <item android:title="@string/menuDate_Conexiune"></item>
+            <item android:title="@string/menuDate_PreiaDate"></item>
+        </menu>
+    </item>
+    <item android:id="@+id/menu_item_exit"
+        android:title="@string/menuExit"
+        android:onClick="onExitMenuItem"
+        android:alphabeticShortcut="x">
+    </item>
+</menu>
