@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloWorldApplication</string>
+    <string name="label_hello">Hello World ! Care este numele tau ?</string>
+    <string name="button_click">Click me !</string>
+</resources>

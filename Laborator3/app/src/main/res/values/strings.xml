@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Laborator3</string>
+    <string name="labelButonInfo">Info</string>
+    <string name="labelButonAbout">About</string>
+    <string name="textInfoApp">Exemplu laborator 3, ver. 1.0</string>
+
+    <string name="textServer">127.0.0.1</string>
+    <string name="textPort">50000</string>
+    <string name="labelServer">Server: </string>
+    <string name="labelPort">Port: </string>
+    <string name="labelButonSave">Save</string>
+</resources>
