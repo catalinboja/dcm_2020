@@ -67,5 +67,10 @@ public class ToDoAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
+    public void adaugaElement(ToDo toDo){
+        toDoList.add(toDo);
+        notifyDataSetChanged();
+    }
+
 
 }

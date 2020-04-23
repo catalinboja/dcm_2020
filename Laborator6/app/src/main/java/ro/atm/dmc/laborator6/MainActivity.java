@@ -3,9 +3,11 @@ package ro.atm.dmc.laborator6;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int MENU_ITEM_DETAILS = 2;
 
     ArrayList<ToDo> toDos = new ArrayList<>();
-    ToDoAdapter toDoAdapter;
+    public static ToDoAdapter toDoAdapter;
 
     private void initListaToDo(){
         ToDo activitate1 =
@@ -92,5 +94,32 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onContextItemSelected(item);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = new MenuInflater(this);
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.adauga: {
+
+                Intent intent = new Intent(this, AdaugaToDoActivity.class);
+                startActivity(intent);
+                return true;
+
+            }
+            case R.id.salvare: {
+
+                return true;
+            }
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
