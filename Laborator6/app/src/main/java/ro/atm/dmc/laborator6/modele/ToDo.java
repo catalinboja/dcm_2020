@@ -2,13 +2,14 @@ package ro.atm.dmc.laborator6.modele;
 
 import androidx.annotation.NonNull;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import ro.atm.dmc.laborator6.R;
 
-public class ToDo {
+public class ToDo implements Serializable {
     private String text;
     private Date termenLimita;
     private boolean esteImportanta;
@@ -62,4 +63,5 @@ public class ToDo {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
         return this.text + " - " + simpleDateFormat.format(this.termenLimita).toString();
     }
+
 }

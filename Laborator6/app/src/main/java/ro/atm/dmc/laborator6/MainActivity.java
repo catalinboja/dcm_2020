@@ -13,10 +13,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Date;
 
+import ro.atm.dmc.laborator6.modele.BackupDate;
 import ro.atm.dmc.laborator6.modele.ToDo;
 import ro.atm.dmc.laborator6.modele.ToDoAdapter;
 
@@ -29,16 +31,26 @@ public class MainActivity extends AppCompatActivity {
     public static ToDoAdapter toDoAdapter;
 
     private void initListaToDo(){
-        ToDo activitate1 =
-                new ToDo("Laborator DMC", new Date("4/23/2020"), true);
-        ToDo activitate2=
-                new ToDo("Tema DMC", new Date("4/29/2020"), true);
-        ToDo activitate3=
-                new ToDo("Documentare", new Date("4/28/2020"), false);
 
-        toDos.add(activitate1);
-        toDos.add(activitate2);
-        toDos.add(activitate3);
+        toDos = BackupDate.incarcaDate(this);
+        if(toDos == null) {
+            //nu am date in fisierul de backup
+            toDos = new ArrayList<>();
+            ToDo activitate1 =
+                    new ToDo("Laborator DMC", new Date("4/23/2020"), true);
+            ToDo activitate2 =
+                    new ToDo("Tema DMC", new Date("4/29/2020"), true);
+            ToDo activitate3 =
+                    new ToDo("Documentare", new Date("4/28/2020"), false);
+
+            toDos.add(activitate1);
+            toDos.add(activitate2);
+            toDos.add(activitate3);
+        }
+        else
+        {
+            Toast.makeText(this,"Incarcare date din fisier", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -116,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
             }
             case R.id.salvare: {
 
+                BackupDate.salvareDate(toDos, this);
+                Toast.makeText(this,"Salvare date", Toast.LENGTH_SHORT).show();
                 return true;
             }
         }
