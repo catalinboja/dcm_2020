@@ -44,6 +44,8 @@ public class ToDo {
         this.prioritate = prioritate;
     }
 
+    public void setId(int id) { this.id = id; }
+
     @Override
     public String toString() {
         return "ToDo{" +

@@ -18,13 +18,10 @@ public interface ToDoDAO {
     public void update(ToDo todo);
 
     @Delete()
-    public void deleteAll();
-
-    @Delete()
     public void delete(ToDo toDo);
 
     @Query("DELETE FROM ToDo")
-    public void deleteAllCustom();
+    public void deleteAll();
 
     @Query("SELECT * FROM ToDo")
     public List<ToDo> selectAll();
