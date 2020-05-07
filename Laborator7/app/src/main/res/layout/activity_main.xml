@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="62dp" />
+
+    <TextView
+        android:id="@+id/textViewData"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:text="Hello World!" />
+
+    <Button
+        android:id="@+id/buttonSetari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="deschideSettings"
+        android:text="Setari aplicatie" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="47dp" />
+
+    <Button
+        android:id="@+id/buttonIncarcaDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="incarcaDateVreme"
+        android:text="Incarca date vreme" />
+
+</LinearLayout>
