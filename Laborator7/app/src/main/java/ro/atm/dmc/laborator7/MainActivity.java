@@ -17,8 +17,9 @@ public class MainActivity extends AppCompatActivity {
         //salvare API Key
         String api = InterfataPreferinte.citestePrefString(this,"APIKey");
         if(api.isEmpty()){
+            //TODO: trebuie initializata cu o valoare predefinita
             InterfataPreferinte.scriePrefString(this,
-                    "APIKey", "8Df8uzklw9oooCPtUvTvvtNu2OxCGvu2");
+                    "APIKey", "aaaaaaaaaaaaaa");
         }
     }
 
