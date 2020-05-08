@@ -2,6 +2,8 @@ package ro.atm.dmc.laborator8.date;
 
 import android.content.Context;
 
+import androidx.lifecycle.LiveData;
+
 import java.util.List;
 
 public class ToDoSursaDate {
@@ -26,5 +28,8 @@ public class ToDoSursaDate {
                 toDoDAO.insert(toDo);
             }
         });
+
+        //nu prea e ok - pot ajunge desincronizate
+        toDoList.add(toDo);
     }
 }

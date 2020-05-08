@@ -32,4 +32,7 @@ public interface ToDoDAO {
     @Query("SELECT * FROM ToDo ORDER BY text ASC")
     public List<ToDo> selectAllDupaText();
 
+    @Query("SELECT COUNT(id) FROM ToDo WHERE prioritate = :prioritate ")
+    public int countToDo(int prioritate);
+
 }

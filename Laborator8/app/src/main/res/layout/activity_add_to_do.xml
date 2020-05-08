@@ -15,8 +15,7 @@
         android:ems="10"
         android:hint="To do ..."
         android:inputType="textPersonName"
-        android:minHeight="16dp"
-        android:text="Name" />
+        android:minHeight="16dp" />
 
     <Spinner
         android:id="@+id/spinner"
